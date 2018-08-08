@@ -1,0 +1,4 @@
+import SimulateGame
+
+SimulateGame.PlayGame()
+
