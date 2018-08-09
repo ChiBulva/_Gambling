@@ -56,11 +56,16 @@ for week in range(1,18):
 
     fileOut = open(CurWeekBare,'w')
     WeekCount = 1
+    fileOut.write("{")
     for num in range(0,len(HomeTeams)-1,2):
-        fileOut.write("\""+HomeTeams[num]+"\":\""+HomeTeams[num+1]+"\"\n")
         MasterFile.write(HomeTeams[num]+str(weekNum)+"\n"+HomeTeams[num+1]+str(weekNum)+"\n")
+        if(num==len(HomeTeams)):
+            fileOut.write("\""+HomeTeams[num]+"\": \""+HomeTeams[num+1]+"\"")
+            break
+        fileOut.write("\""+HomeTeams[num]+"\": \""+HomeTeams[num+1]+"\",\n")
+    fileOut.write("}")
     fileOut.close()
-
+    
 MasterFile.close()
 print("\nDone, checkout \"./NFLSchedule2018!\"")
 
