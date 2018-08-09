@@ -6,52 +6,52 @@ app = Flask(__name__)
 
 def readtextfile(x):
     Teams = {}
-    with open('static/Games/Week'+str(x)+'Bare.out','r') as inf:
+    with open('static/Games/game'+str(x)+'Bare.out','r') as inf:
         Teams = eval(inf.read())
     return Teams
 
-@app.route("/Football_week_1")
-def Football_week_1():
+@app.route("/Football_game_1")
+def Football_game_1():
     Teams = readtextfile("1")
-    x = int(100)
+    x = 1
     return render_template("football.html", Teams=Teams, x=x)
 
 
-@app.route("/Football_week_2")
-def Football_week_2():
+@app.route("/Football_game_2")
+def Football_game_2():
     Teams = readtextfile("2")
-    x = int(100)
+    x = 2
     return render_template("football.html", Teams=Teams, x=x)
 
 
-@app.route("/Football_week_3")
-def Football_week_3():
+@app.route("/Football_game_3")
+def Football_game_3():
     Teams = readtextfile("3")
-    x = int(100)
+    x = 3
     return render_template("football.html", Teams=Teams, x=x)
 
-@app.route("/Football_week_4")
-def Football_week_4():
+@app.route("/Football_game_4")
+def Football_game_4():
     Teams = readtextfile("4")
-    x = int(100)
+    x = 4
     return render_template("football.html", Teams=Teams, x=x)
 
-@app.route("/Football_week_5")
-def Football_week_5():
+@app.route("/Football_game_5")
+def Football_game_5():
     Teams = readtextfile("5")
-    x = int(100)
+    x = 5
     return render_template("football.html", Teams=Teams, x=x)
 
-@app.route("/Football_week_6")
-def Football_week_6():
+@app.route("/Football_game_6")
+def Football_game_6():
     Teams = readtextfile("6")
-    x = int(100)
+    x = 6
     return render_template("football.html", Teams=Teams, x=x)
 
-@app.route("/Football_week_7")
-def Football_week_7():
+@app.route("/Football_game_7")
+def Football_game_7():
     Teams = readtextfile("7")
-    x = int(100)
+    x = 7
     return render_template("football.html", Teams=Teams, x=x)
 
 '''
