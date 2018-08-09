@@ -57,7 +57,7 @@ for week in range(1,18):
     fileOut = open(CurWeekBare,'w')
     WeekCount = 1
     for num in range(0,len(HomeTeams)-1,2):
-        fileOut.write("\""+HomeTeams[num]+"\":\""+HomeTeams[num+1]+"\"\n")
+        fileOut.write("\""+HomeTeams[num]+"\",\""+HomeTeams[num+1]+"\"\n")
         MasterFile.write(HomeTeams[num]+str(weekNum)+"\n"+HomeTeams[num+1]+str(weekNum)+"\n")
     fileOut.close()
 
